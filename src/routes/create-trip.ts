@@ -30,8 +30,6 @@ export async function createTrip(app: FastifyInstance) {
             throw new Error('The end date must be in the future');
         }
 
-        
-
         const trip = await prisma.trip.create({
             data: {
                 destination,
